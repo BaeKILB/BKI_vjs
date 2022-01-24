@@ -26,7 +26,7 @@ function onClockTimer() {
   const hour = nowDate.getHours();
   const min = nowDate.getMinutes();
 
-  ondate.innerText = `${year} - ${month} - ${day}`;
+  ondate.innerText = `${year} - ${month + 1} - ${day}`;
   clock.innerText = `${hour} : ${min}`;
 }
 
@@ -100,6 +100,8 @@ function removeTodo(event) {
 setInterval(onClockTimer, 1000);
 
 document.body.style.backgroundImage =
-  "url(https://source.unsplash.com/weekly?city)";
+  "url(https://source.unsplash.com/daily?city)";
+document.body.style.backgroundSize = "cover";
+document.body.style.backgroundRepeat = "no-repeat";
 loginForm.addEventListener("submit", onLoginSub);
 toDoForm.addEventListener("submit", addToDo);
